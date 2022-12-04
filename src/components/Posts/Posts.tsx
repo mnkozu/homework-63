@@ -7,6 +7,7 @@ interface Props {
 }
 
 const Posts: React.FC<Props> = ({posts}) => {
+
   return (
     <>
      <h4>Posts</h4>
