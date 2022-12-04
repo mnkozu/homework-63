@@ -3,6 +3,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {PostApi} from "../../types";
 import axiosApi from "../../axiosApi";
 import PostForm from "../../components/PostForm/PostForm";
+import Spinner from "../../components/Spinner/Spinner";
 
 const EditPost = () => {
   const {id} = useParams();
@@ -36,11 +37,14 @@ const EditPost = () => {
 
   return (
     <div className="row mt-2">
-      <div className="col">
-        {post && (
-          <PostForm onSubmit={updatePost} existingPost={post} loading={loading}/>
-        )}
-      </div>
+      {loading ? <Spinner/> : (
+        <div className="col">
+          {post && (
+            <PostForm onSubmit={updatePost} existingPost={post} loading={loading}/>
+          )}
+        </div>
+        )
+      }
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Home from "./containers/Home/Home";
 import NewPost from "./containers/NewPost/NewPost";
 import EditPost from "./containers/EditPost/EditPost";
 import PostItem from "./components/Posts/PostItem";
+import About from "./containers/About/About";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           )}/>
           <Route path={'/posts/:id/edit'} element={(
             <EditPost/>
+          )}/>
+          <Route path={'/about'} element={(
+            <About/>
           )}/>
           <Route path="*" element={(
             <h1>Not found!</h1>
