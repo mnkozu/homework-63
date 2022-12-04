@@ -29,11 +29,13 @@ const Home = () => {
     fetchPosts().catch(console.error);
   }, [fetchPosts]);
 
+  const empty = <div className="m-2"><h3>It's empty! Add some post in the section "Add"</h3></div>;
+
+  const content = posts.length === 0 ? empty : <Posts posts={posts}/>;
+
   return (
-    <div>
-      {loading ? <Spinner/> : (
-        <Posts posts={posts}/>
-      )}
+    <div className="row">
+      {loading ? <Spinner/> : content}
     </div>
   );
 };

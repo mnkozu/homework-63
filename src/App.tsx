@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./containers/Home/Home";
 import NewPost from "./containers/NewPost/NewPost";
 import EditPost from "./containers/EditPost/EditPost";
+import PostItem from "./components/Posts/PostItem";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Routes>
           <Route path={'/'} element={(
             <Home/>
+          )}/>
+          <Route path={'/posts/:id'} element={(
+            <PostItem />
           )}/>
           <Route path={'/posts/add'} element={(
             <NewPost/>

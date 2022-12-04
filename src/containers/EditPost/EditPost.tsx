@@ -21,7 +21,7 @@ const EditPost = () => {
   }, [id]);
 
   useEffect(() => {
-    fetchOnePost().catch(console.error);
+    void fetchOnePost();
   }, [fetchOnePost]);
 
   const updatePost = async (post: PostApi) => {
