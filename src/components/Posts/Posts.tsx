@@ -8,8 +8,8 @@ interface Props {
 
 const Posts: React.FC<Props> = ({posts}) => {
   return (
-    <div className="col-7">
-     <h4>Posts</h4>
+    <div className="px-4">
+     <h3 className="py-2">Posts</h3>
       {posts.map((post) => (
         <div className="card mb-2" key={post.id}>
           <div className="card-header text-secondary">{post.date}</div>

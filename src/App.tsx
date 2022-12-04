@@ -6,6 +6,7 @@ import NewPost from "./containers/NewPost/NewPost";
 import EditPost from "./containers/EditPost/EditPost";
 import PostItem from "./components/Posts/PostItem";
 import About from "./containers/About/About";
+import Contacts from "./containers/Contacts/Contacts";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           )}/>
           <Route path={'/about'} element={(
             <About/>
+          )}/>
+          <Route path={'/contacts'} element={(
+            <Contacts/>
           )}/>
           <Route path="*" element={(
             <h1>Not found!</h1>

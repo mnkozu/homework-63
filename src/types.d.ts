@@ -4,7 +4,6 @@ export interface Post {
   description: string;
   date: string | null;
 }
-
 export type PostApi = Omit<Post, 'id'>;
 
 export interface PostList {
@@ -20,4 +19,15 @@ export interface AboutType {
 
 export interface AboutApi {
   [id: string]: AboutType;
+}
+
+export interface ContactType {
+  name: string;
+  link: string;
+  icon: IconPrefix;
+  id: string;
+}
+
+export interface ContactApi {
+  [id: string]: ContactType;
 }
